@@ -9,7 +9,6 @@ CONF = 0.3
 
 class Model:
     def __init__(self,
-                 confidence=CONF,
                  model_file='detector.tflite',
                  ext_delegate=None,
                  num_threads=3):
@@ -30,6 +29,10 @@ class Model:
         self.width = self.input_details[0]['shape'][2]
 
     def detect(self, img):
+        '''
+        receives an image in OpenCV format and returns array containing normalized x,y coordinates of the center
+         and normalized width and height values for the most likely window.
+        '''
         img = cv.resize(img, IMG_SIZE) #resize H,W
         tmp = img[:, :, 0]
         img[:, :, 0] = img[:, :, 2]

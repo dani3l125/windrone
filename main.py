@@ -13,7 +13,6 @@ parser = argparse.ArgumentParser(
     epilog='Text at the bottom of help')
 
 parser.add_argument('-e', '--edges', type=float, default=0.25)
-parser.add_argument('-c', '--confidence', type=float, default=0.4)
 parser.add_argument('-o', '--outdoor', type=int, default=1)
 parser.add_argument('-f', '--fly', type=int, default=1)
 parser.add_argument('--headless', type=int, default=0)
@@ -27,7 +26,7 @@ finished = False
 landed = False
 
 if __name__ == '__main__':
-    model = Model(confidence=args.confidence)
+    model = Model()
     drone = Drone(fly=args.fly)
     drone.fly_to_start(outdoor=args.outdoor)
     avg_iteration_time = 0
