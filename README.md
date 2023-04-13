@@ -1,7 +1,7 @@
 
 # WINDrone
 Autonomus embedded toy drone getting into a building from a window.
-### Ilustration:
+### Illustration:
  on [laptop](https://drive.google.com/drive/u/0/folders/1Ui3aVITxfdUsNWyqbkA_s0EW2ZDXliQU)
  on [Raspberry Pi zero 2](1Ui3aVITxfdUsNWyqbkA_s0EW2ZDXliQU)
 
